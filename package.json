@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "lodash": "^4.17.21",
+    "lodash.throttle": "^4.1.1",
     "material-icons": "^1.10.11",
     "nanoid": "^3.3.4",
     "notyf": "^3.10.0"
