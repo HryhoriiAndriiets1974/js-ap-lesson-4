@@ -6,7 +6,8 @@
   "homepage": "https://HryhoriiAndriiets1974.github.io/js-ap-lesson-4",
   "scripts": {
     "dev": "parcel src/*.html --open",
-    "build": "parcel build src/*.html --public-url /js-ap-lesson-4/"
+    "build": "parcel build src/*.html --public-url /js-ap-lesson-4/",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -26,7 +27,6 @@
     "sass": "^1.32.8"
   },
   "dependencies": {
-    "lodash": "^4.17.21",
     "lodash.throttle": "^4.1.1",
     "material-icons": "^1.10.11",
     "nanoid": "^3.3.4",

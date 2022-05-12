@@ -15,7 +15,7 @@ const notyf = new Notyf();
 
 init();
 modalForm.addEventListener('submit', onSubmit);
-formSearch.addEventListener('input', onSearch);
+formSearch.addEventListener('input', Lodash(onSearch, 500));
 contactsList.addEventListener('click', onDelete);
 
 function init() {
