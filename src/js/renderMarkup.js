@@ -1,7 +1,7 @@
 export const renderMarkup = (renderList, container) => {
       container.innerHTML = "";
       const markup = renderList.map( ({name, email, phone, id}) => `
-      <div class="card col-6 col-md-4 mb-1 position-relative">
+      <div class="card col-6 col-md-4 mb-1 position-relative shadow">
         <div class="card-body">
           <h5 class="card-title d-flex align-items-center gap-1 mb-4">
             <span class="material-icons-round"> cast </span> ${name}

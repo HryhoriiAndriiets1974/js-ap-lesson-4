@@ -1,4 +1,4 @@
-import {nanoid} from 'nanoid';
+import { nanoid } from 'nanoid';
 import'material-icons/iconfont/material-icons.css';
 import { Notyf } from 'notyf';
 import 'notyf/notyf.min.css';
