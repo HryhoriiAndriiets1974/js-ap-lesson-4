@@ -15,7 +15,7 @@ const notyf = new Notyf();
 
 init();
 modalForm.addEventListener('submit', onSubmit);
-formSearch.addEventListener('input', lodach(onSearch, 500));
+formSearch.addEventListener('input', onSearch);
 contactsList.addEventListener('click', onDelete);
 
 function init() {
@@ -25,6 +25,7 @@ function init() {
     renderMarkup(contactsFromLS, contactsList);
   }
 };
+
 
 function onSubmit(e) {
   e.preventDefault();
@@ -47,7 +48,7 @@ function onSubmit(e) {
   Storage.save(LS_KEY, [...contacts, newContact]);
 
   contacts.push(newContact);
-  renderMarkup(contactsFromLS, contactsList);
+  renderMarkup(contacts, contactsList);
 
   modalForm.reset();
 };
@@ -56,10 +57,10 @@ function onSearch(e) {
   const searchValue = e.target.value.toLowerCase().trim();
   const contacts = Storage.load(LS_KEY);
   if (contacts) {
-    const parseContacts = contacts.filter(contact =>
+    const parsedContacts = contacts.filter(contact =>
       contact.name.toLowerCase().includes(searchValue))
   }
-  renderMarkup(contactsFromLS, contactsList);
+  renderMarkup(parsedContacts, contactsList);
 };
 
 function onDelete(e) {
